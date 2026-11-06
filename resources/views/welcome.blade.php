@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.css') }}">
     <title>{{ config('app.name', 'Credaka') }}</title>
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -12,7 +13,7 @@
 
 <body>
     <div class="container main-container">
-        <livewire:home-page /> 
+        <livewire:home-page />
     </div>
 </body>
 

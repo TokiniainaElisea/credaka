@@ -22,7 +22,6 @@ export default defineConfig({
     resolve: {
         alias: {
             vue: 'vue/dist/vue.esm-bundler.js',
-            '#nativephp': path.resolve(__dirname, 'vendor/nativephp/mobile/resources/dist/native.js'),
         },
         
     },

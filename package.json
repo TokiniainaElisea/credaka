@@ -21,7 +21,6 @@
         "bootstrap": "^5.3.8",
         "bootstrap5": "^1.1.9",
         "tesseract.js": "^7.0.0",
-        "vue": "^3.5.45",
-        "#nativephp": "./vendor/nativephp/mobile/resources/dist/native.js"
+        "vue": "^3.5.45"
     }
 }

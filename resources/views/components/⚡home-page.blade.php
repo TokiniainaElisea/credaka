@@ -55,12 +55,12 @@ new class extends Component {
 };
 ?>
 
-<div class="container py-4 main-container">
+<div class="container">
 
     <div class="text-center mb-4">
         <h3 class="fw-bold">
             <i class="bi bi-lightning-charge-fill text-warning"></i>
-            FlashRecharge
+            Credaka
         </h3>
         <p class="text-secondary">
             Recharge tes crédits en quelques secondes.
