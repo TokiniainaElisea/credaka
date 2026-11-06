@@ -1,0 +1,3 @@
+.main-container{
+    padding-top:  env(safe-area-inset-top, 20px);
+}
