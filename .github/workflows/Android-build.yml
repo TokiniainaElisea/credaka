@@ -98,20 +98,20 @@ jobs:
           ANDROID_KEYSTORE: ${{ secrets.ANDROID_KEYSTORE }}
         run: |
           # Decodage robuste qui nettoie les retours à la ligne
-          echo "$ANDROID_KEYSTORE" | tr -d '\r\n' | base64 --decode > "$GITHUB_WORKSPACE/proto-x-24.jks"
+          echo "$ANDROID_KEYSTORE" | tr -d '\r\n' | base64 --decode > "$GITHUB_WORKSPACE/credaka.jks"
 
           # Verification que le fichier existe et n'est pas vide
-          if [ ! -s "$GITHUB_WORKSPACE/proto-x-24.jks" ]; then
+          if [ ! -s "$GITHUB_WORKSPACE/credaka.jks" ]; then
             echo "Erreur: Le fichier Keystore est vide ou invalide !"
             exit 1
           fi
 
-          echo "Keystore généré avec succès ($(du -h "$GITHUB_WORKSPACE/proto-x-24.jks" | cut -f1))."
+          echo "Keystore généré avec succès ($(du -h "$GITHUB_WORKSPACE/credaka.jks" | cut -f1))."
 
       # 11. Build signed Android package
       - name: Build Android package
         env:
-          ANDROID_KEYSTORE_FILE: ${{ github.workspace }}/proto-x-24.jks
+          ANDROID_KEYSTORE_FILE: ${{ github.workspace }}/credaka.jks
           ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
